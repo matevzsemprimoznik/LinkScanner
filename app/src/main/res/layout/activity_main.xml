@@ -6,46 +6,75 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <Button
+        android:id="@+id/cameraButton"
+        android:layout_width="50dp"
+        android:layout_height="39dp"
+        android:background="@drawable/camera_icon"
+        android:padding="3dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="@+id/menuBackground"
+        app:layout_constraintTop_toTopOf="@+id/menuBackground"
+        app:layout_constraintVertical_bias="0.35000002" />
+
+    <Button
+        android:id="@+id/historyButton"
+        android:layout_width="42dp"
+        android:layout_height="43dp"
+        android:background="@drawable/history_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/menuBackground"
+        app:layout_constraintVertical_bias="0.35000002" />
+
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="410dp"
+        android:id="@+id/menuBackground"
+        android:layout_width="0dp"
         android:layout_height="94dp"
         android:background="#2E343D"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
-    <ImageView
-        android:id="@+id/imageView2"
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="48dp"
-        android:layout_marginRight="48dp"
-        app:layout_constraintEnd_toEndOf="@+id/button"
-        app:srcCompat="@drawable/CameraIcon"
-        tools:layout_editor_absoluteY="664dp" />
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp"
+        app:layout_constraintGuide_percent="0.5"/>
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="205dp"
-        android:layout_height="93dp"
-        android:background="#2E343D"
+    <TextView
+        android:id="@+id/cameraText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CAMERA"
+        android:textColor="#00CCFF"
+        android:textSize="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cameraButton"
         app:layout_constraintVertical_bias="0.0" />
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="205dp"
-        android:layout_height="92dp"
-        android:background="#2E343D"
+    <TextView
+        android:id="@+id/historyText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HISTORY"
+        android:textColor="#FFFFFF"
+        android:textSize="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.666"
-        app:layout_constraintStart_toEndOf="@+id/button"
-        app:layout_constraintTop_toTopOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/historyButton"
+        app:layout_constraintVertical_bias="0.058" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
