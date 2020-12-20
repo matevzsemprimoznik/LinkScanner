@@ -57,10 +57,11 @@ public class MainActivity extends AppCompatActivity {
         TextRecognizer textRecognizer = new TextRecognizer.Builder(getApplicationContext()).build();
         if (!textRecognizer.isOperational()) {
             Log.w("MainActivity", "Not available");
-        } else {
+        }
+        else {
             cameraSource = new CameraSource.Builder(getApplicationContext(), textRecognizer)
                     .setFacing(CameraSource.CAMERA_FACING_BACK)
-                    .setRequestedPreviewSize(400, 200)
+                    .setRequestedPreviewSize(1280, 1024)
                     .setRequestedFps(2.0f)
                     .setAutoFocusEnabled(true)
                     .build();
